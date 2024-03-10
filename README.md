@@ -1,2 +1,2 @@
 # Conway-s-Game-of-Life
-Conway's game of life implemented in Rust and running in the terminal.
+Conway's game of life implemented in Rust and running in the terminal. That's what it is. I don't know what you expect more. It is conway's game of life, using hashtags and spaces in the terminal. The program uses some ANSI escape characters to go to the top of the board to reprint, but if the terminal is less wide than the default size of the board (150 characters), line wrapping will screw you and cause the board to overflow. The board is a default 150 x 40 characters, controlled by `WIDTH` and `HEIGHT` in `main.rs`. That's it.
