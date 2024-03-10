@@ -52,10 +52,10 @@ fn randomize_grid<const W: usize, const H: usize>() -> [[u8; W]; H] {
 fn display_grid<const W: usize, const H: usize>(grid: [[u8; W]; H]) {
     let mut lines: String = "".to_string();
 
-    for row in 0..grid.len() {
+    for row in 0..H {
         let mut line: String = "".to_string();
         
-        for col in 0..grid[row].len() {
+        for col in 0..W {
             line += if grid[row][col] == 0 {
                 " "
             } else {
@@ -65,7 +65,7 @@ fn display_grid<const W: usize, const H: usize>(grid: [[u8; W]; H]) {
 
         lines += &line;
         
-        if row != grid.len() - 1 {
+        if row != H - 1 {
             lines += "\n";
         }
     }
